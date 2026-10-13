@@ -1,0 +1,14 @@
+{
+  "title": "Agriculture AI Assistant",
+  "description": "This AI-powered agriculture assistant provides Chhattisgarh farmers with reliable information on schemes, crops, and government services, ensuring easy access to vital resources.",
+  "icons": {
+    "icon": "/cheerful-wheat-mascot.png"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

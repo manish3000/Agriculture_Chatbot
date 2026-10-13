@@ -1,0 +1,228 @@
+{
+  "evaluatedAt": "2026-10-13T07:12:38.465Z",
+  "vectorStoreChunks": 459,
+  "retrieval": {
+    "totalQuestions": 33,
+    "hits": 28,
+    "recallAt5Pct": 84.8,
+    "mrr": 0.813,
+    "categoryStats": {
+      "pm_kisan_eligibility_documents": {
+        "total": 4,
+        "hits": 4
+      },
+      "agriculture_horticulture_schemes": {
+        "total": 6,
+        "hits": 6
+      },
+      "registration_and_application": {
+        "total": 4,
+        "hits": 4
+      },
+      "crop_cultivation_and_disease": {
+        "total": 4,
+        "hits": 2
+      },
+      "hindi_queries": {
+        "total": 3,
+        "hits": 3
+      },
+      "hinglish_queries": {
+        "total": 3,
+        "hits": 2
+      },
+      "spelling_errors_and_ambiguity": {
+        "total": 4,
+        "hits": 3
+      },
+      "unsupported_hallucination_traps": {
+        "total": 3,
+        "hits": 2
+      },
+      "conflicting_guidelines": {
+        "total": 2,
+        "hits": 2
+      }
+    }
+  },
+  "models": {
+    "qwen3:8b": {
+      "testQueriesCount": 5,
+      "averageLatencyMs": 64672,
+      "groundednessPct": 60,
+      "hallucinationCount": 1,
+      "officialCitationPct": 100,
+      "memoryFootprintEstimateGB": 5.9
+    },
+    "qwen3.8:27b": {
+      "testQueriesCount": 5,
+      "averageLatencyMs": 243692,
+      "groundednessPct": 80,
+      "hallucinationCount": 0,
+      "officialCitationPct": 100,
+      "memoryFootprintEstimateGB": 17.7
+    }
+  },
+  "comparisons": [
+    {
+      "id": "pmkisan-01",
+      "category": "pm_kisan_eligibility_documents",
+      "question": "What are the eligibility criteria and required documents for PM-KISAN scheme?",
+      "isAnswerable": true,
+      "models": {
+        "qwen3:8b": {
+          "totalTimeMs": 54106,
+          "genDurationMs": 54086,
+          "evalCount": 256,
+          "evalDurationMs": 29530,
+          "tokensPerSec": "8.7",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 2,
+          "answerSnippet": "Okay, let's tackle this query about the PM-KISAN scheme eligibility. The user is asking for the criteria and required documents.  First, I need to look through "
+        },
+        "qwen3.8:27b": {
+          "totalTimeMs": 253928,
+          "genDurationMs": 253874,
+          "evalCount": 256,
+          "evalDurationMs": 104481,
+          "tokensPerSec": "2.5",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 2,
+          "answerSnippet": "The farmer is asking about eligibility criteria and required documents for PM-KISAN. Let me check what's available in the provided context:  From the context, I"
+        }
+      }
+    },
+    {
+      "id": "horti-01",
+      "category": "agriculture_horticulture_schemes",
+      "question": "What are the key state horticulture schemes implemented by the Chhattisgarh government?",
+      "isAnswerable": true,
+      "models": {
+        "qwen3:8b": {
+          "totalTimeMs": 97934,
+          "genDurationMs": 97912,
+          "evalCount": 256,
+          "evalDurationMs": 28837,
+          "tokensPerSec": "8.9",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 3,
+          "answerSnippet": "Okay, let's tackle this query. The user is asking about the key state horticulture schemes in Chhattisgarh.  First, I need to refer back to the provided context"
+        },
+        "qwen3.8:27b": {
+          "totalTimeMs": 205423,
+          "genDurationMs": 205410,
+          "evalCount": 256,
+          "evalDurationMs": 117024,
+          "tokensPerSec": "2.2",
+          "grounded": false,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 3,
+          "answerSnippet": "Bhai, Chhattisgarh sarkar ki **state-level horticulture schemes** yeh hain — sab verified government data se:  - **Samakit Udyan"
+        }
+      }
+    },
+    {
+      "id": "proc-01",
+      "category": "registration_and_application",
+      "question": "How can a farmer apply for horticulture subsidies in Chhattisgarh and what documents are required?",
+      "isAnswerable": true,
+      "models": {
+        "qwen3:8b": {
+          "totalTimeMs": 67903,
+          "genDurationMs": 67884,
+          "evalCount": 256,
+          "evalDurationMs": 31903,
+          "tokensPerSec": "8.0",
+          "grounded": false,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 3,
+          "answerSnippet": "- **Apply Online"
+        },
+        "qwen3.8:27b": {
+          "totalTimeMs": 273924,
+          "genDurationMs": 273914,
+          "evalCount": 256,
+          "evalDurationMs": 120978,
+          "tokensPerSec": "2.1",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 3,
+          "answerSnippet": "**How to Apply for Horticulture Subsidies in Chhattisgarh:**  - **Apply online or offline:** Register on the Chhattisgarh Horticulture Farmer Portal (https://ag"
+        }
+      }
+    },
+    {
+      "id": "trap-01",
+      "category": "unsupported_hallucination_traps",
+      "question": "Can a tenant farmer without any land records get a free 65 HP tractor in Raipur under the 2026 Free Tractor scheme?",
+      "isAnswerable": false,
+      "models": {
+        "qwen3:8b": {
+          "totalTimeMs": 51259,
+          "genDurationMs": 51246,
+          "evalCount": 256,
+          "evalDurationMs": 31040,
+          "tokensPerSec": "8.2",
+          "grounded": false,
+          "hallucinationDetected": true,
+          "hasOfficialCitation": true,
+          "sourceCount": 3,
+          "answerSnippet": "Okay, let's tackle this question. The user is asking if a tenant farmer without land records can get a free 65 HP tractor in Raipur under the 2026 Free Tractor "
+        },
+        "qwen3.8:27b": {
+          "totalTimeMs": 231726,
+          "genDurationMs": 231711,
+          "evalCount": 256,
+          "evalDurationMs": 76693,
+          "tokensPerSec": "3.3",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 3,
+          "answerSnippet": "The user is asking about a \"2026 Free Tractor scheme\" for tenant farmers without land records in Raipur. Let me check the provided context carefully:  1. Source"
+        }
+      }
+    },
+    {
+      "id": "conflict-01",
+      "category": "conflicting_guidelines",
+      "question": "Is physical Aadhaar card photocopy submission enough for PM-KISAN, or is biometric/facial eKYC strictly mandatory now?",
+      "isAnswerable": true,
+      "models": {
+        "qwen3:8b": {
+          "totalTimeMs": 52158,
+          "genDurationMs": 52138,
+          "evalCount": 256,
+          "evalDurationMs": 30985,
+          "tokensPerSec": "8.3",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 2,
+          "answerSnippet": "Okay, let's tackle this question about PM-KISAN and Aadhaar requirements. The user is asking whether a physical Aadhaar card photocopy is enough or if biometric"
+        },
+        "qwen3.8:27b": {
+          "totalTimeMs": 253457,
+          "genDurationMs": 253440,
+          "evalCount": 256,
+          "evalDurationMs": 100031,
+          "tokensPerSec": "2.6",
+          "grounded": true,
+          "hallucinationDetected": false,
+          "hasOfficialCitation": true,
+          "sourceCount": 2,
+          "answerSnippet": "The farmer asks whether a physical Aadhaar card photocopy is sufficient for PM-KISAN, or if biometric/facial eKYC is now strictly mandatory.  Let me look at wha"
+        }
+      }
+    }
+  ]
+}

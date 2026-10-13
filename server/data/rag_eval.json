@@ -1,0 +1,63 @@
+[
+  {
+    "id": "pm_docs_english",
+    "category": "relevant",
+    "language": "en",
+    "query": "What documents and bank details are needed for PM-KISAN registration?",
+    "expectedSource": "RevisedFAQ.pdf",
+    "expectedTerms": ["aadhaar", "ifsc"]
+  },
+  {
+    "id": "pm_family_definition",
+    "category": "relevant",
+    "language": "en",
+    "query": "How does PM-KISAN define a farmer family?",
+    "expectedSource": "RevisedFAQ.pdf",
+    "expectedTerms": ["husband", "wife", "minor"]
+  },
+  {
+    "id": "pm_eligibility_typos",
+    "category": "relevant",
+    "language": "hinglish",
+    "query": "PM Kishan yojna me income tax dene wale kisan eligible hain?",
+    "expectedSource": "pmkisan.gov.in",
+    "expectedTerms": ["income tax"]
+  },
+  {
+    "id": "pm_payment_hindi",
+    "category": "relevant",
+    "language": "hi",
+    "query": "पीएम किसान की राशि कितनी किस्तों में मिलती है?",
+    "expectedSource": "pmkisan.gov.in",
+    "expectedTerms": ["6000", "installment"]
+  },
+  {
+    "id": "pm_payment_hinglish",
+    "category": "relevant",
+    "language": "hinglish",
+    "query": "PM kisaan ka paisa kitni kist mein aata hai?",
+    "expectedSource": "pmkisan.gov.in",
+    "expectedTerms": ["installment", "2000"]
+  },
+  {
+    "id": "ambiguous_eligibility",
+    "category": "ambiguous",
+    "language": "en",
+    "query": "Am I eligible for this scheme?",
+    "expectedBehavior": "clarify_scheme_and_farmer_details"
+  },
+  {
+    "id": "irrelevant_crop_pest",
+    "category": "irrelevant",
+    "language": "en",
+    "query": "How do I control tomato leaf blight?",
+    "forbiddenSource": "RevisedFAQ.pdf"
+  },
+  {
+    "id": "unanswerable_personal_status",
+    "category": "unanswerable",
+    "language": "en",
+    "query": "What is my personal PM-KISAN application status?",
+    "expectedBehavior": "insufficient_evidence_or_official_status_portal"
+  }
+]
